@@ -182,6 +182,6 @@ logrotate_app 'beaver' do
   frequency 'daily'
   postrotate node['beaver']['logrotate']['postrotate']
   options node['beaver']['logrotate']['options']
-  rotate default['beaver']['logrotate']['days']
+  rotate default['beaver']['logrotate']['days'].to_i
   create "0640 #{node['beaver']['user']} #{node['beaver']['group']}"
 end
