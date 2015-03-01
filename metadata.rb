@@ -1,0 +1,10 @@
+name             'beaver'
+maintainer       'Shrinath Aithal'
+maintainer_email 'shrinath_m2@yahoo.co.in'
+license          'Apache 2.0'
+description      'Installs/Configures beaver in Opsworks'
+long_description 'Installs/Configures beaver with SQS'
+version          '0.1.0'
+
+depends 'python'
+depends 'logrotate'
