@@ -5,6 +5,7 @@ default['beaver']['join_groups'] = []
 default['beaver']['log_dir'] = '/var/log/beaver'
 default['beaver']['pid_dir'] = '/var/run/beaver'
 default['beaver']['pip_package'] = 'beaver==33.1.0'
+default['beaver']['format'] = 'raw'
 default['beaver']['logrotate']['options'] = %w(missingok notifempty compress copytruncate)
 default['beaver']['logrotate']['postrotate'] = 'invoke-rc.d beaver force-reload >/dev/null 2>&1 || true'
 default['beaver']['logrotate']['days'] = 30
