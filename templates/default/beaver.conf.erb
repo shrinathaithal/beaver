@@ -7,6 +7,12 @@
 <%   file['path'].each do |path| -%>
 [<%= path %>]
 type: <%= file['type'] || 'file' %>
+<% if file.has_key?('multiline_regex_before') -%>
+multiline_regex_before: <%= file['multiline_regex_before'] %>
+<% end -%>
+<% if file.has_key?('multiline_regex_after') -%>
+multiline_regex_after: <%= file['multiline_regex_after'] %>
+<% end -%>
 <% if file.has_key?('exclude') -%>
 exclude: <%= file['exclude'] %>
 <% end -%>
