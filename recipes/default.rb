@@ -111,7 +111,7 @@ if outputs.length > 1
   log("multiple outputs detected, will consider only the first: #{output}") { level :warn }
 end
 
-cmd = "beaver -t #{output} -c #{conf_file} -F #{format}"
+cmd = "beaver -t #{output} -c #{conf_file} -F #{format} -P /var/run/beaver.pid -D"
 
 template conf_file do
   source 'beaver.conf.erb'
